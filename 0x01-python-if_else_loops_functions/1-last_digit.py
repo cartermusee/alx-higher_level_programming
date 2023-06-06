@@ -4,7 +4,7 @@ number = random.randint(-10000, 10000)
 mod = number % 10
 if mod > 5:
     print(f"last digit of {number} is {mod} and is greater than 5")
-if mod == 0:
+elif mod == 0:
     print(f"last digit of {number} is {mod} and is 0")
-elif mod < 6:
+else:
     print(f"last digit of {number} is {mod} and is less than 6 and not 0")
