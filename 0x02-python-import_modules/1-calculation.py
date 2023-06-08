@@ -1,6 +1,5 @@
 #!/usr/bin/pyhon3
 if __name == "__main__":
-    """ creates a basic calc."""
     from calculator_1 import add, sub, mul, div
 
     a = 10
