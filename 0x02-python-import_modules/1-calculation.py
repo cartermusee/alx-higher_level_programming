@@ -1,5 +1,5 @@
 #!/usr/bin/pyhon3
-if __name __ == "__main__":
+if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
 
     a = 10
