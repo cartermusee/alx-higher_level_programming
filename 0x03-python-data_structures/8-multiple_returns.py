@@ -1,4 +1,4 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 def multiple_returns(sentence):
     tuple_len = len(sentence)
     if tuple_len == 0:
