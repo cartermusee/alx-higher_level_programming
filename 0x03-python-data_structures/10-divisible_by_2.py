@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def divisible_by_2(my_list=[]):
+    """divisible by 2"""
     len_my_list = len(my_list)
     if len_my_list == 0:
         return None
