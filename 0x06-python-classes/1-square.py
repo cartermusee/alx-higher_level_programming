@@ -5,9 +5,9 @@
 class Square:
     """ a square """
 
-    def __init__(self, size)
+    def __init__(self, size):
         """ initialize a new one (square)
         takes arg:
-        size which is int and size of new square"""
+            size which is int and size of new square"""
 
         self.__size = size
