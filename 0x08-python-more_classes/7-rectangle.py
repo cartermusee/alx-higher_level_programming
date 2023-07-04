@@ -3,10 +3,14 @@
 
 
 class Rectangle:
+
     """ class rectangle"""
-    number_of_instance = 0
+
+    number_of_instances = 0
     print_symbol = '#'
+
     def __init__(self, width=0, height=0):
+
         """ Instantiation with width and height"""
         self.width = width
         self.height = height
