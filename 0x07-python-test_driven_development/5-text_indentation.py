@@ -6,7 +6,7 @@
 def text_indentation(text):
 
     """a function that idents text
-    
+
     args:
         text:the text itself
     returns nothing
