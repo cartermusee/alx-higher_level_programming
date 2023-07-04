@@ -4,7 +4,7 @@
 
 class Rectangle:
     """ class rectangle"""
-    number_of_instance = 0
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
         """ Instantiation with width and height"""
         self.width = width
@@ -59,10 +59,6 @@ class Rectangle:
     def __repr__(self):
         """ return string rep of the rectangle"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
-
-    def __del__(self):
-        """message when an instance of Rectangle is deleted"""
-        print("Bye rectangle...")
 
     def __del__(self):
         """message when an instance of Rectangle is deleted"""
