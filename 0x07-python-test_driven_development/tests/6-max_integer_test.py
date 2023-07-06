@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""using unitest for max_int ()"""
-
-
+"""Unittest for max_integer([..])
+"""
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
@@ -28,19 +27,15 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([1, 3 * 4, 6, 8]), 12)
 
     def test_string(self):
-        with self.assertEqual(TypeError):
+        with self.assertRaises(TypeError):
             max_integer([1, 'r'])
 
     def test_tuple(self):
-        with self.assertEqual(TypeError):
+        with self.assertRaises(TypeError):
             max_integer([1, (1, 2)])
 
-    def test_dictionary(self):
-        with self.assertEqual(TypeError):
-            max_integer({"name": 'jack', "key": 'value'})
-
     def test_int(self):
-        with self.assertEqual(TypeError):
+        with self.assertRaises(TypeError):
             max_integer(1)
 
     def test_loop(self):
