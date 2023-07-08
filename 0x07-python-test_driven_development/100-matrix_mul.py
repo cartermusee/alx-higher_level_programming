@@ -79,7 +79,7 @@ def matrix_mul(m_a, m_b):
         n2 = 0
         num = 0
         while (n2 < len(m_b[0])):
-            num += a[i1] * m_b[i1][n2]
+            num += a[n1] * m_b[n1][n2]
             if n1 == len(m_b) - 1:
                 n1 = 0
                 n2 += 1
