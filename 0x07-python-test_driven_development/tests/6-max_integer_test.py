@@ -19,6 +19,8 @@ class TestMaxInteger(unittest.TestCase):
             100, 200, 2, 5, 66, 78, 98,
             67, 54, 45, 23, 32, 55, 76,
             89, 65, 56]), 200)
+    def test_one_number_in_a_list(self):
+        self.assertEqual(max_integer([4]), 2)
 
     def test_negative(self):
         self.assertEqual(max_integer([-1, -2, -3, -4, -5]), -1)
