@@ -1,0 +1,47 @@
+The ``7-base_geometry`` module
+============================
+
+Using ``BaseGeometry``
+---------------------
+
+Import function from module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+using it:
+    >>> bg = BaseGeometry()
+    >>> type(bg) == BaseGeometry
+    True
+
+    >>> bg.__class__.area()
+    Traceback (most recent call last):
+    TypeError: area() missing 1 required positional argument: 'self'
+
+    >>> type(BaseGeometry.__dict__['area'])
+    <class 'function'>
+
+    >>> type(BaseGeometry.__dict__['integer_validator'])
+    <class 'function'>
+
+    >>> bg.integer_validator(3, 4, 4)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+    >>> bg.integer_validator("k", 3.0)
+    Traceback (most recent call last):
+    TypeError: k must be an integer
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> bg.integer_validator("p", 8.4)
+    Traceback (most recent call last):
+    TypeError: p must be an integer
+
+    >>> bg.integer_validator("c", True)
+    Traceback (most recent call last):
+    TypeError: c must be an integer
+
+    >>> bg.integer_validator("c", None)
+    Traceback (most recent call last):
+    TypeError: c must be an integer
