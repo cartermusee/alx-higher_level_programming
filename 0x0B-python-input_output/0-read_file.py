@@ -2,8 +2,7 @@
 """module with read function"""
 
 
-def read_file(filename = ""):
+def read_file(filename=""):
     """function which reads a file"""
-    with open(filename, 'r',  encoding = 'utf-8') as f:
-        print(f.read())
-
+    with open(filename, 'r', encoding='utf-8') as f:
+        print(f.read(), end='')
