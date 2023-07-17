@@ -7,8 +7,7 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
 
     """class square which inherits from rectangle"""
-    def __init__(self, size, x=0, y=0, id=None):
-        
+    def __init__(self, size, x=0, y=0, id=None): 
         """constructors"""
         self.size = size
         self.x = x
@@ -18,7 +17,6 @@ class Square(Rectangle):
 
     def __str__(self):
         """string rep"""
-
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
     @property
@@ -38,8 +36,7 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.__width = value
 
-    def update(self, *args, **kwargs):
-        
+    def update(self, *args, **kwargs): 
         """args and kwargs function
         argument:
             args:argum which are not limmited
@@ -64,8 +61,7 @@ class Square(Rectangle):
                 if key == 'y':
                     self.y = value
 
-    def to_dictionary(self):
-        
+    def to_dictionary(self): 
         """dict representation"""
         return {'id': self.id,
                 'size': self.size,
