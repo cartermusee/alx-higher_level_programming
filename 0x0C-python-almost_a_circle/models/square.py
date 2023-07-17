@@ -8,6 +8,7 @@ class Square(Rectangle):
 
     """class square which inherits from rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
+        
         """constructors"""
         self.size = size
         self.x = x
@@ -33,6 +34,7 @@ class Square(Rectangle):
         self.__width = value
 
     def update(self, *args, **kwargs):
+        
         """args and kwargs function"""
         if args is not None and len(args) != 0:
             if len(args) >= 1:
@@ -55,6 +57,7 @@ class Square(Rectangle):
                     self.y = value
 
     def to_dictionary(self):
+        
         """dict representation"""
         return {'id': self.id,
                 'size': self.size,
