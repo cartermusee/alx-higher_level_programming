@@ -92,7 +92,7 @@ class Rectangle(Base):
     def __str__(self):
         """function that returns the str repre of rec"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
-                .format(self.id, self.x, self.y, self.width, self.height)
+            .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """update functionn which updates attr
