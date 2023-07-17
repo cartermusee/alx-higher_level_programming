@@ -79,6 +79,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """function that returns the area"""
         return self.__height * self.__width
 
     def display(self):
@@ -89,10 +90,15 @@ class Rectangle(Base):
             print(" " * self.__x + '#' * self.__width)
 
     def __str__(self):
+        """function that returns the str repre of rec"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
                 .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
+        """update functionn which updates attr
+        argument:
+            args:no limit for argument to pass
+            kwargs: defined arguments"""
         if args and len(args) != 0:
             i = 0
             for arg in args:
@@ -128,6 +134,7 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
+        """return a dict repre of rec"""
         return {'id': self.id,
                 'width': self.__width,
                 'height': self.__height,
