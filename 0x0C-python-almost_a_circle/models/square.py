@@ -23,10 +23,15 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """a getter functioin which returns the size"""
         return self.__width
 
     @size.setter
     def size(self, value):
+        """a setter function for size
+        args:
+            value which is same as size
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -35,7 +40,10 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         
-        """args and kwargs function"""
+        """args and kwargs function
+        argument:
+            args:argum which are not limmited
+            kwargs: defined argument"""
         if args is not None and len(args) != 0:
             if len(args) >= 1:
                 self.id = args[0]
