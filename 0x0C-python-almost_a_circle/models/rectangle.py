@@ -16,10 +16,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """function for getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """function for setter of width
+        args:
+            takes value as arg"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -28,10 +32,14 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """function for getter"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """function for setter of height
+        args:
+            takes value as arg"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -40,10 +48,14 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """function for getter"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """function for setter of x
+        args:
+            takes value as arg"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -52,10 +64,14 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """function for getter"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """function for setter of y
+        args:
+            takes value as arg"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
