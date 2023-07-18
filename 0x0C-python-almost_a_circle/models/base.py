@@ -80,7 +80,7 @@ class Base:
     def save_to_file_csv(cls, list_objs):
         """function to save a csv file
         args:
-            list of objects"""
+            list_obj:list of objects"""
         filename = cls.__name__ + '.csv'
         with open(filename, 'w', newline='') as file:
             if list_objs is None or list_objs == []:
@@ -115,8 +115,8 @@ class Base:
     def draw(list_rectangles, list_squares):
         """rec and square using turtle
         args:
-            list rect objects
-            sq list objects
+            list_rectangle:list rect objects
+            list_square:sq list objects
         """
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
