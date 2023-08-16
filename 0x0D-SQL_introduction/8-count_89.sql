@@ -1,4 +1,4 @@
 -- count
 SELECT COUNT(*)
-FROM `firts_table`
+FROM `first_table`
 WHERE `id` = 89
