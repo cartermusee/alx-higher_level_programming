@@ -7,4 +7,3 @@ JOIN tv_genres
 ON tv_genres.id = tv_show_genres.genre_id
 WHERE tv_genres.name LIKE '%Comedy%'
 ORDER BY tv_shows.title ASC;
-~                            
