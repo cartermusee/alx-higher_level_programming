@@ -2,7 +2,7 @@
 const x = process.argv[2];
 const num1 = parseInt(x);
 if (num1) {
-  for (let i = 0; i < x; i++) {
+  for (let i = 0; i < num1; i++) {
     console.log('c is fun');
   }
 } else {
