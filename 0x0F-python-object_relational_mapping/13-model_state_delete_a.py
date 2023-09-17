@@ -22,7 +22,7 @@ if __name__ == '__main__':
     session = cn_session()
 
     query = session.query(State).\
-        filter(State.name.like('%s%')).all()
+        filter(State.name.like('%a%')).all()
     for row in query:
         session.delete(row)
     session.commit()

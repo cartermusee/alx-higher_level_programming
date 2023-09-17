@@ -10,7 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from sys import argv
-from model_city import Base, City
+from model_city import City
 
 
 if __name__ == '__main__':
@@ -23,9 +23,9 @@ if __name__ == '__main__':
     cn_session = sessionmaker(bind=engine)
     session = cn_session()
 
-    query = session.query(State, City).\
-        filter(State.id == City.state.id).all()
+    query = session.query(City, State).join(State)
 
-    for state, city in query:
-        print("{}: ({}) {}".format(state.id, city.id, city.name))
+    for city, state in query.all():
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
+    session.commit()
     session.close()
