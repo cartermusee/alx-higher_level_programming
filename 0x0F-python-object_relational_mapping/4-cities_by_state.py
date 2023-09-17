@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """
-script that takes in
-an argument and displays all
-values in the states table of hbtn_0e_0_usa
-where name matches the argument.
+script that lists all cities
+from the database hbtn_0e_4_usa
 """
 
 
@@ -13,9 +11,7 @@ from sys import argv
 
 if __name__ == '__main__':
     """
-    create a connection and list states
-    list all states as per users input
-    prevent sql injection
+    create a connection and list cities
     order by ascending order
     """
 
@@ -24,9 +20,8 @@ if __name__ == '__main__':
         passwd=argv[2], db=argv[3])
     cur = db_connection.cursor()
 
-    cur.execute("SELECT * FROM states \
-                WHERE name LIKE BINARY %s \
-                ORDER BY id ASC", (argv[4],))
+    cur.execute("SELECT * FROM cities \
+                ORDER BY id ASC")
 
     results = cur.fetchall()
 
