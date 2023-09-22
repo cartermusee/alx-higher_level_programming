@@ -23,9 +23,9 @@ if __name__ == '__main__':
     cn_session = sessionmaker(bind=engine)
     session = cn_session()
 
-    query = session.query(City, State).join(State)
-
-    for city, state in query.all():
-        print("{}: ({}) {}".format(city.state.name, city.id, city.name))
+    query = session.query(State, City).\
+            filter(State.id == City.state_id).all()
+    for state, city in query:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.commit()
     session.close()
