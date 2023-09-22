@@ -20,13 +20,15 @@ if __name__ == '__main__':
         passwd=argv[2], db=argv[3])
     cur = db_connection.cursor()
 
-    cur.execute("SELECT * FROM cities \
-                ORDER BY id ASC")
+    cur.execute("SELECT cities.id, cities.name, states.name
+                FROM cities Join states ON cities.states_id == states.id
+                ORDER BY cities.id ASC")
 
     results = cur.fetchall()
 
     for row in results:
-        print(row)
+        for all_row in row:
+            print(all_row)
 
     cur.close()
     db_connection.close()
