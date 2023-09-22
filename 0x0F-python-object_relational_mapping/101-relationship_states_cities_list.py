@@ -25,8 +25,8 @@ if __name__ == '__main__':
     query = session.query(State).outerjoin(City).\
         order_by(State.id, City.id).all()
     for state in query:
-        print("{}: {}".format(State.id, State.name))
-        for city in query:
-            print("{}: {}".format(City.id, City.name))
+        print("{}: {}".format(state.id, state.name))
+        for city in state.cities:
+            print("  {}: {}".format(city.id, city.name))
     session.commit()
     session.close()
