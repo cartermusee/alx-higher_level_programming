@@ -8,11 +8,8 @@ class definition of a City
 
 
 from sqlalchemy import Integer, String, Column, Table, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
-from model_state import State
-
-Base = declarative_base()
+from relationship_state import State, Base
 
 
 class City(Base):
