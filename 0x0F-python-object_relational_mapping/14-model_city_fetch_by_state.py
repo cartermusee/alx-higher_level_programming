@@ -24,7 +24,7 @@ if __name__ == '__main__':
     session = cn_session()
 
     query = session.query(State, City).\
-            filter(State.id == City.state_id).all()
+        filter(State.id == City.state_id).all()
     for state, city in query:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.commit()
