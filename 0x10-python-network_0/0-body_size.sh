@@ -4,6 +4,6 @@
 
 url=$1
 
-response=$(curl -s $url)
-size=$(echo $response | wc -c)
+response=$(curl -s "$url")
+size=${#response}
 echo "$size"
