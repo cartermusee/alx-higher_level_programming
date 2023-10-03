@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """module for post"""
 import urllib.request
-import urllib.parse
+import urllib.error
 from sys import argv
 
 
@@ -13,4 +13,4 @@ if __name__ == "__main__":
             res_body = response.read().decode("utf-8")
             print(res_body)
     except urllib.error.HTTPError as e:
-        print(e.code)
+        print("Error code:", e.code)
