@@ -6,8 +6,8 @@ import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    lq = "" if len(sys.argv) == 1 else sys.argv[1]
-    payload = {"q": lq}
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
+    payload = {"q": letter}
     res = requests.post(url, data=payload)
     try:
         res_json = res.json()
