@@ -11,8 +11,8 @@ if __name__ == "__main__":
     else:
         lq = ""
     par = {"q": lq}
+    res = requests.post(url, data=par)
     try:
-        res = requests.post(url, data=par)
         res_json = res.json()
 
         if res_json:
