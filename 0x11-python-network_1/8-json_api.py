@@ -10,8 +10,8 @@ if __name__ == "__main__":
         lq = ""
     else:
         lq = sys.argv[1]
-    par = {"q": lq}
-    res = requests.post(url, data=par)
+    payload = {"q": lq}
+    res = requests.post(url, data=payload)
     try:
         res_json = res.json()
 
