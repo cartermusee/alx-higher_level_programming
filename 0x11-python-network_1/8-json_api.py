@@ -7,10 +7,10 @@ from sys import argv
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
     if len(argv) > 1:
-        q = argv[1]
+        lq = argv[1]
     else:
-        q = ""
-    par = {"q": "q"}
+        lq = ""
+    par = {"q": lq}
     try:
         res = requests.post(url, data=par)
         res_json = res.json()
