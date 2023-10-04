@@ -6,7 +6,7 @@ import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    if len(sys.argv) == 2:
+    if len(sys.argv) == 1:
         lq = sys.argv[1]
     else:
         lq = ""
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     try:
         res_json = res.json()
 
-        if 'id' in res_json and 'name' in res_json:
+        if res_json:
             print("{[]} {}".format(res_json['id'], res_json['name']))
         else:
             print("No result")
