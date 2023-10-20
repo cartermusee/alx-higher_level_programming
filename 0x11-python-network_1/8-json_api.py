@@ -1,19 +1,24 @@
 #!/usr/bin/python3
 """module for request package"""
-import requests
 import sys
+import requests
 
 
 if __name__ == "__main__":
-    url = "http://0.0.0.0:5000/search_user"
-    letter = "" if len(sys.argv) == 1 else sys.argv[1]
-    payload = {"q": letter}
-    res = requests.post(url, data=payload)
-    try:
-        res_json = res.json()
 
-        if res_json:
-            print("{[]} {}".format(res_json.get('id'), res_json.get('name')))
+    if sys.argv == 1:
+        letter = ""
+    else:
+        letter = sys.argv[1]
+    url = "http://0.0.0.0:5000/search_user"
+    params = {"q":letter}
+
+    res = requests.post(url, data=params)
+
+    try:
+        dat = res.json()
+        if dat:
+            print("[{}] {}".format(dat.get("id"), dat.get('name')))
         else:
             print("No result")
     except ValueError:
