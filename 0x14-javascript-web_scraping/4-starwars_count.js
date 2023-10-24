@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-const id = '18';
+const id = 18;
 let count = 0;
 const url = process.argv[2];
 request(url, (error, response, body) => {
