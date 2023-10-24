@@ -13,7 +13,5 @@ request(url, (error, response, body) => {
       }
     }
     console.log(count);
-  } else {
-    console.error(error);
   }
 });
